@@ -1,0 +1,565 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    margin-top: 80px; /* Fixed header */
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #d3ad7f;
+    --secondary-color: #222222;
+    --accent-color: #8c6e3b;
+    --text-color: #fff;
+    --muted-color: #ffffff ;
+    --dark-background: #13131a;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .navbar-brand img {
+    height: 60px;
+    object-fit: cover;
+}
+
+.navbar-nav {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: var(--text-color);
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    background-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--text-color);
+}
+
+/* Responsive Navbar */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.4rem;
+    }
+}
+
+/* Active Link Styles */
+.navbar-nav .nav-item.active .nav-link {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+.card img {
+    width: 100%; /* Làm cho hình ảnh chiếm hết chiều rộng của card */
+    height: 250px; /* Đặt chiều cao cố định cho hình ảnh */
+    object-fit: cover; /* Giữ tỉ lệ khung hình mà không bị méo, cắt bớt các phần thừa */
+    border-radius: 8px; /* Góc bo tròn cho hình ảnh */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Home Section */
+/* Home Section */
+#home {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding-top: 80px; /* Adjust for fixed navbar */
+}
+
+/* Carousel Inner Content */
+#home .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    min-height: 60vh;
+    background-color: var(--secondary-color);
+}
+
+/* Carousel Text */
+#home .carousel-item h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+#home .carousel-item p {
+    font-size: 1.4rem;
+    color: var(--muted-color);
+}
+
+#home .carousel-item .btn {
+    background-color: var(--primary-color);
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    border: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#home .carousel-item .btn:hover {
+    background-color: #b38a61;
+}
+
+/* Carousel Image */
+#home .carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Controls */
+
+.carousel-control-next-icon {
+    background-color: var(--primary-color);
+}
+
+/* Active Carousel Item */
+.carousel-item.active {
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* Section Titles */
+section h2 {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+section h2 span {
+    color: var(--primary-color);
+}
+
+/* About Section */
+#about {
+    background-color: var(--secondary-color);
+    padding: 5rem 0;
+}
+
+#about img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+}
+
+#about h3 {
+    font-size: 2.5rem;
+    color: var(--text-color) !important;
+    margin-bottom: 1.5rem;
+}
+
+#about p {
+    font-size: 1.4rem;
+    color: var(--muted-color);
+}
+#about img {
+    width: 100%; /* Hình ảnh sẽ chiếm toàn bộ chiều rộng của phần */
+    height: 400px; /* Đảm bảo hình ảnh có chiều cao cố định */
+    object-fit: cover;
+}
+
+
+
+#menu .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1c1c1c;
+}
+#menu {
+    background-color: var(--dark-background) !important;
+    padding: 6rem 0;
+
+}
+#menu .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#menu img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Responsive Adjustments */
+
+#menu .btn {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+#menu .card-title {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-top: 1.5rem;
+}
+
+#menu .card-text {
+    font-size: 1.4rem;
+    color: var(--muted-color) !important;
+}
+
+#menu .btn {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#menu .btn:hover {
+    background-color: var(--accent-color);
+}
+@media (max-width: 768px) {
+    #menu img {
+        height: auto;
+    }
+}
+/* Products Section */
+#products {
+    padding: 6rem 0;
+}
+
+#products .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--secondary-color);
+}
+
+#products .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#products .card-title {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+#products .card-text {
+    font-size: 1.4rem;
+    color: var(--muted-color) !important;
+}
+
+#products .btn {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#products .btn:hover {
+    background-color: var(--accent-color);
+}
+#products .card img {
+    height: 250px; /* Đảm bảo tất cả hình ảnh trong mục Products đều có cùng chiều cao */
+    object-fit: cover;
+}
+#products .card img {
+    height: 300px; /* Hình ảnh trong sản phẩm có chiều cao đồng đều */
+    object-fit: cover;
+}
+
+
+/* Reviews Section */
+#reviews {
+    background-color: #030303;
+    padding: 5rem 0;
+}
+
+#reviews .card {
+    background-color: var(--dark-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+#reviews .card-body {
+    padding: 5rem;
+    text-align: center;
+}
+
+#reviews img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+#reviews .card-text {
+    font-size: 1.5rem;
+    color: var(--muted-color);
+}
+
+#reviews .text-warning i {
+    color: var(--primary-color);
+}
+#reviews img {
+    width: 80px; /* Chiều rộng cố định cho ảnh khách hàng */
+    height: 80px; /* Chiều cao cố định cho ảnh khách hàng */
+    object-fit: cover;
+    border-radius: 50%; /* Bo tròn ảnh để giống hình tròn */
+    margin-bottom: 1rem;
+}
+#reviews .mt-3{
+    color: #fff;
+}
+#reviews h2{
+    color: #333;
+}
+
+/* Contact Section */
+#contact {
+    background-color: var(--dark-background);
+    padding: 6rem 0;
+}
+
+#contact iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+#contact form .form-control {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+#contact form .btn {
+    background-color: var(--primary-color);
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#contact form .btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Blogs Section */
+#blogs {
+    background-color: var(--secondary-color);
+    padding: 6rem 0;
+}
+
+#blogs .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--dark-background);
+}
+
+#blogs .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#blogs .card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+#blogs .card-title {
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+#blogs .card-text {
+    font-size: 1.4rem;
+    color: var(--muted-color);
+}
+
+#blogs .btn {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#blogs .btn:hover {
+    background-color: var(--accent-color);
+}
+#blogs .card img {
+    height: 250px; /* Chiều cao đồng đều cho tất cả hình ảnh trong mục Blogs */
+    object-fit: cover;
+}
+#blogs h2{
+    color: #333;
+}
+
+
+/* Footer Section Styles */
+#footer {
+    background: linear-gradient(to bottom right, #333, #444);
+    color: #fff;
+    padding: 5rem 0;
+}
+
+#footer h5 {
+    font-size: 1.5rem;
+    color: #d3ad7f;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+#footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#footer ul li {
+    margin: 10px 0;
+}
+
+#footer ul li a {
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+#footer ul li a:hover {
+    color: #d3ad7f;
+}
+
+/* Social Media Icons */
+#footer .btn {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#footer .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+#footer .btn-outline-light:hover {
+    background-color: #d3ad7f;
+    border-color: #d3ad7f;
+    color: white;
+}
+
+/* Newsletter Input */
+#footer .form-control {
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+/* Copyright Section */
+#footer .text-center p {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin: 10px 0;
+}
+
+#footer .text-warning {
+    color: #d3ad7f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #footer .row {
+        text-align: center;
+    }
+
+    #footer .col-md-3 {
+        margin-bottom: 2rem;
+    }
+
+    #footer .btn {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1rem;
+    }
+
+    #footer h5 {
+        font-size: 1.3rem;
+    }
+
+    #footer ul li a {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 3rem;
+    }
+
+    #home p {
+        font-size: 1.4rem;
+    }
+
+    #footer .btn-circle {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2rem;
+    }
+
+    #footer .row a {
+        font-size: 1rem;
+        margin: 5px 10px;
+    }
+
+    #footer .row p {
+        font-size: 0.9rem;
+    }
+}
