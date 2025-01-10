@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 body {
-    background-color: #121212;
+    background-color: #fff !important;
     color: #fff;
     line-height: 1.6;
     font-size: 1.6rem;
@@ -26,13 +26,13 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background-color: var(--secondary-color);
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(95, 52, 17, 0.37);
+    padding: 16px 32px;
+    box-shadow: 0 5px 15px rgba(255, 254, 254, 0.3);
+    height: 80px;
 }
-
 .navbar .navbar-brand img {
-    height: 60px;
+    height: 120px;
     object-fit: cover;
 }
 
@@ -63,6 +63,16 @@ body {
 
 /* Responsive Navbar */
 @media (max-width: 991px) {
+    .navbar{
+        background-color: rgba(95, 52, 17, 0.37);
+        padding: 16px 32px;
+        box-shadow: 0 5px 15px rgba(255, 254, 254, 0.3);
+        margin: 0;
+    }
+    .navbar .navbar-brand img {
+        height: 60px;
+        object-fit: cover;
+    }
     .navbar-nav {
         text-align: center;
         width: 100%;
@@ -75,6 +85,7 @@ body {
     .navbar-nav .nav-link {
         font-size: 1.4rem;
     }
+
 }
 
 /* Active Link Styles */
@@ -90,68 +101,86 @@ body {
     border-radius: 8px; /* Góc bo tròn cho hình ảnh */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Home Section */
-/* Home Section */
-#home {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    padding-top: 80px; /* Adjust for fixed navbar */
-}
-
-/* Carousel Inner Content */
-#home .carousel-item {
+/* Banner Section */
+.banner-section {
+    background: url(./img/home.png) no-repeat center center/cover;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: left;
-    min-height: 60vh;
-    background-color: var(--secondary-color);
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Carousel Text */
-#home .carousel-item h3 {
-    font-size: 3rem;
+/* Introduction Section */
+.introduction-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+.introduction-section h2 {
+    color: #333;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-color);
+    margin-bottom: 1rem;
 }
 
-#home .carousel-item p {
-    font-size: 1.4rem;
-    color: var(--muted-color);
+.introduction-section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
 }
 
-#home .carousel-item .btn {
-    background-color: var(--primary-color);
-    padding: 1rem 3rem;
-    font-size: 1.4rem;
-    border: none;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-#home .carousel-item .btn:hover {
-    background-color: #b38a61;
-}
-
-/* Carousel Image */
-#home .carousel-item img {
-    width: 100%;
-    height: auto;
+.introduction-section img {
     border-radius: 10px;
-    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+.introduction-section img:hover{
+    transform: scale(1.05);
+}
+/* Button Styles */
+.btn-warning {
+    background-color: #ff9800;
+    border: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Controls */
-
-.carousel-control-next-icon {
-    background-color: var(--primary-color);
+.btn-warning:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Active Carousel Item */
-.carousel-item.active {
-    transition: transform 0.5s ease-in-out;
+.btn-outline-warning {
+    border: 2px solid #ff9800;
+    color: #ff9800;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.btn-outline-warning:hover {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .banner-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .introduction-section h2 {
+        font-size: 2rem;
+    }
+
+    .introduction-section p {
+        font-size: 1rem;
+    }
+}
+
+/* General styles for the home section */
 
 
 /* Section Titles */
@@ -172,8 +201,123 @@ section h2 span {
     background-color: var(--secondary-color);
     padding: 5rem 0;
 }
+/* Header Section */
+.about-header {
+    background: url(./img/about-banner.png) no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
 
-#about img {
+.about-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.about-header p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Our Story Section */
+#our-story img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+#our-story h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#our-story p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+#our-story span{
+    color:#4f2c1c;
+    line-height: 115%;
+    font-size: 16px;
+}
+
+/* Our Mission Section */
+#our-mission {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+#our-mission h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#our-mission p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+#our-story img:hover{
+    transform: scale(1.05);
+}
+#our-story a{
+    background: white;
+    line-height: 115%;
+    color: #af272e;
+}
+/* Team Section */
+#team img {
+    border: 3px solid #ff9800;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#team img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#team h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+#team h5 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+#team p {
+    color: #777;
+    font-size: 1rem;
+    margin-top: 0.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-header h1 {
+        font-size: 2rem;
+    }
+
+    .about-header p {
+        font-size: 1.2rem;
+    }
+
+    #our-story h2, #our-mission h2, #team h2 {
+        font-size: 2rem;
+    }
+
+    #our-story p, #our-mission p {
+        font-size: 1rem;
+    }
+}
+
+/* #about img {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
@@ -193,11 +337,11 @@ section h2 span {
     font-size: 1.4rem;
     color: var(--muted-color);
 }
-#about img {
-    width: 100%; /* Hình ảnh sẽ chiếm toàn bộ chiều rộng của phần */
-    height: 400px; /* Đảm bảo hình ảnh có chiều cao cố định */
+#about img { */
+    /* width: 100%; Hình ảnh sẽ chiếm toàn bộ chiều rộng của phần
+    height: 400px; Đảm bảo hình ảnh có chiều cao cố định
     object-fit: cover;
-}
+} */
 
 
 
@@ -208,7 +352,7 @@ section h2 span {
     background-color: #1c1c1c;
 }
 #menu {
-    background-color: var(--dark-background) !important;
+    background-color: #fff;
     padding: 6rem 0;
 
 }
@@ -218,7 +362,7 @@ section h2 span {
 }
 
 #menu img {
-    height: 200px;
+    height: 400px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
@@ -228,29 +372,20 @@ section h2 span {
 #menu .btn {
     background-color: var(--primary-color);
     padding: 1rem 2rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
     border: none;
     transition: background-color 0.3s ease;
 }
 #menu .card-title {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: var(--text-color);
     margin-top: 1.5rem;
 }
 
 #menu .card-text {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: var(--muted-color) !important;
 }
-
-#menu .btn {
-    background-color: var(--primary-color);
-    padding: 1rem 2rem;
-    font-size: 1.4rem;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
 #menu .btn:hover {
     background-color: var(--accent-color);
 }
@@ -297,7 +432,7 @@ section h2 span {
     background-color: var(--accent-color);
 }
 #products .card img {
-    height: 250px; /* Đảm bảo tất cả hình ảnh trong mục Products đều có cùng chiều cao */
+    height: 300px; /* Đảm bảo tất cả hình ảnh trong mục Products đều có cùng chiều cao */
     object-fit: cover;
 }
 #products .card img {
@@ -316,7 +451,7 @@ section h2 span {
     background-color: var(--dark-background);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
+    height: 300px;
 }
 
 #reviews .card-body {
@@ -333,7 +468,8 @@ section h2 span {
 }
 
 #reviews .card-text {
-    font-size: 1.5rem;
+    height: 100px;
+    font-size: 1rem;
     color: var(--muted-color);
 }
 
@@ -388,7 +524,7 @@ section h2 span {
 /* Blogs Section */
 #blogs {
     background-color: var(--secondary-color);
-    padding: 6rem 0;
+    padding: 3rem 0;
 }
 
 #blogs .card {
@@ -403,24 +539,25 @@ section h2 span {
 }
 
 #blogs .card-body {
-    padding: 2rem;
+    padding: 3rem;
     text-align: center;
+    height: 200px;
 }
 
 #blogs .card-title {
-    font-size: 1.8rem;
+    font-size: 0.9rem;
     color: var(--text-color);
 }
 
 #blogs .card-text {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: var(--muted-color);
 }
 
 #blogs .btn {
     background-color: var(--primary-color);
-    padding: 1rem 2rem;
-    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     border: none;
     transition: background-color 0.3s ease;
 }
@@ -429,7 +566,7 @@ section h2 span {
     background-color: var(--accent-color);
 }
 #blogs .card img {
-    height: 250px; /* Chiều cao đồng đều cho tất cả hình ảnh trong mục Blogs */
+    height: 300px; /* Chiều cao đồng đều cho tất cả hình ảnh trong mục Blogs */
     object-fit: cover;
 }
 #blogs h2{
@@ -439,7 +576,7 @@ section h2 span {
 
 /* Footer Section Styles */
 #footer {
-    background: linear-gradient(to bottom right, #333, #444);
+    background: #333;
     color: #fff;
     padding: 5rem 0;
 }
